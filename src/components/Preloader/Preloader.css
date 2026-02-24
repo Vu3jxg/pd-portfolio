@@ -1,0 +1,72 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: var(--c-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.preloader__inner {
+    text-align: center;
+}
+
+.preloader__dna {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.preloader__dna span {
+    display: block;
+    width: 8px;
+    height: 44px;
+    background: var(--grad-teal);
+    border-radius: 4px;
+    animation: dnaWave 1s ease-in-out infinite;
+}
+
+@keyframes dnaWave {
+
+    0%,
+    100% {
+        transform: scaleY(0.35);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.preloader__text {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--c-teal-300);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.preloader__dots {
+    animation: blinkDots 1.4s infinite;
+}
+
+@keyframes blinkDots {
+
+    0%,
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    80%,
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,129 @@
+.interests__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.interest-card {
+    position: relative;
+    background: rgba(10, 22, 50, 0.75);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-lg);
+    padding: 2.25rem 2rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: border-color 0.35s, box-shadow 0.35s;
+    overflow: hidden;
+}
+
+.interest-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--grad-teal);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.interest-card:hover {
+    border-color: rgba(56, 217, 202, 0.3);
+    box-shadow: var(--shadow-card), var(--shadow-teal);
+}
+
+.interest-card:hover::before {
+    opacity: 1;
+}
+
+.interest-card--featured {
+    border-color: rgba(56, 217, 202, 0.22);
+    background: linear-gradient(135deg, rgba(34, 197, 181, 0.06), rgba(155, 110, 224, 0.06));
+}
+
+.interest-card--featured::before {
+    opacity: 0.5;
+}
+
+.interest-card__badge {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: var(--grad-teal);
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.22rem 0.75rem;
+    border-radius: 50px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.interest-card__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--r-md);
+    background: rgba(34, 197, 181, 0.1);
+    border: 1px solid rgba(34, 197, 181, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--c-teal-300);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.interest-card__icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.interest-card:hover .interest-card__icon {
+    background: rgba(34, 197, 181, 0.2);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.interest-card__title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--c-text);
+    margin-bottom: 0.85rem;
+}
+
+.interest-card__desc {
+    color: var(--c-text-muted);
+    font-size: 0.92rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+.interest-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.interest-card__tags li {
+    font-size: 0.74rem;
+    padding: 0.22rem 0.7rem;
+    border-radius: 50px;
+    border: 1px solid rgba(56, 217, 202, 0.2);
+    color: var(--c-teal-200);
+    background: rgba(34, 197, 181, 0.05);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 1024px) {
+    .interests__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .interests__grid {
+        grid-template-columns: 1fr;
+    }
+}

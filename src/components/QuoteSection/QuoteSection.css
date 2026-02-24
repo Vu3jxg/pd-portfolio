@@ -1,0 +1,87 @@
+.section--quote {
+    background: linear-gradient(135deg, rgba(8, 15, 34, 0.98), rgba(12, 8, 28, 0.98));
+    position: relative;
+    overflow: hidden;
+}
+
+.section--quote::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -80px;
+    top: -80px;
+    background: radial-gradient(circle, rgba(34, 197, 181, 0.07), transparent 60%);
+    pointer-events: none;
+}
+
+.section--quote::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: -60px;
+    bottom: -60px;
+    background: radial-gradient(circle, rgba(155, 110, 224, 0.07), transparent 60%);
+    pointer-events: none;
+}
+
+.quote-block {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: 2rem 3rem;
+}
+
+.quote-mark {
+    font-family: var(--font-serif);
+    font-size: 7rem;
+    line-height: 0;
+    color: rgba(34, 197, 181, 0.18);
+    position: absolute;
+    pointer-events: none;
+}
+
+.quote-mark:first-child {
+    top: 2.5rem;
+    left: 0;
+}
+
+.quote-mark--close {
+    bottom: -0.5rem;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.quote-block p {
+    font-family: var(--font-serif);
+    font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+    line-height: 1.7;
+    font-style: italic;
+    color: var(--c-text);
+    position: relative;
+    z-index: 1;
+}
+
+.quote-block footer {
+    margin-top: 1.75rem;
+}
+
+.quote-block cite {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--c-teal-400);
+    font-style: normal;
+    letter-spacing: 0.06em;
+}
+
+@media (max-width: 600px) {
+    .quote-block {
+        padding: 1.5rem 1rem;
+    }
+
+    .quote-mark {
+        font-size: 5rem;
+    }
+}

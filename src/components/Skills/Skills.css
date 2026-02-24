@@ -1,0 +1,63 @@
+.skills__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.skill-bar {
+    margin-bottom: 1.75rem;
+}
+
+.skill-bar__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.skill-bar__name {
+    font-weight: 500;
+    color: var(--c-text);
+}
+
+.skill-bar__pct {
+    font-family: var(--font-mono);
+    color: var(--c-teal-300);
+    font-size: 0.8rem;
+}
+
+.skill-bar__track {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-bar__fill {
+    height: 100%;
+    background: var(--grad-teal);
+    border-radius: 3px;
+}
+
+.chips-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--c-text-muted);
+    margin-bottom: 1rem;
+}
+
+.chips-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+@media (max-width: 1024px) {
+    .skills__wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

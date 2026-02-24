@@ -1,0 +1,22 @@
+.back-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--grad-teal);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(34, 197, 181, 0.35);
+    z-index: 900;
+    border: none;
+    cursor: pointer;
+}
+
+.back-top svg {
+    width: 20px;
+    height: 20px;
+}

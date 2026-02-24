@@ -1,0 +1,158 @@
+.timeline {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--c-teal-400), var(--c-purple-400), transparent);
+}
+
+.timeline__item {
+    position: relative;
+    padding: 0 0 2.5rem 3.75rem;
+}
+
+.timeline__item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline__dot {
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--c-bg-2);
+    border: 2.5px solid var(--c-teal-400);
+    box-shadow: 0 0 14px rgba(34, 197, 181, 0.4);
+    z-index: 1;
+    transition: transform 0.3s var(--ease-spring), box-shadow 0.3s;
+}
+
+.timeline__item:hover .timeline__dot {
+    transform: scale(1.4);
+    box-shadow: 0 0 24px rgba(34, 197, 181, 0.7);
+}
+
+.timeline__card {
+    background: rgba(10, 22, 50, 0.75);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+    padding: 1.75rem;
+    backdrop-filter: blur(10px);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.timeline__card:hover {
+    border-color: rgba(56, 217, 202, 0.25);
+    box-shadow: var(--shadow-teal);
+    transform: translateX(6px);
+}
+
+/* Header row with icon + type badge + date */
+.tl-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.tl-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.tl-type-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.18rem 0.65rem;
+    border-radius: 50px;
+    border: 1px solid var(--badge-color, var(--c-teal-400));
+    color: var(--badge-color, var(--c-teal-400));
+    background: color-mix(in srgb, var(--badge-color, var(--c-teal-400)) 10%, transparent);
+    margin-bottom: 0.3rem;
+}
+
+.tl-date {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--c-text-muted);
+    letter-spacing: 0.06em;
+    display: block;
+}
+
+.tl-role {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--c-text);
+    margin-bottom: 0.2rem;
+}
+
+.tl-org {
+    font-size: 0.86rem;
+    color: var(--c-text-muted);
+    margin-bottom: 0.6rem;
+}
+
+/* Grade display — only shown when item has a grade */
+.tl-grade {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+    background: rgba(155, 110, 224, 0.08);
+    border: 1px solid rgba(155, 110, 224, 0.22);
+    border-radius: 50px;
+    padding: 0.25rem 0.85rem;
+}
+
+.tl-grade__label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--c-text-muted);
+}
+
+.tl-grade__value {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--c-purple-300);
+}
+
+
+.tl-desc {
+    font-size: 0.88rem;
+    color: var(--c-text-muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+}
+
+.tl-tags {
+    display: flex;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+}
+
+.tl-tags span {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(34, 197, 181, 0.07);
+    border: 1px solid rgba(34, 197, 181, 0.18);
+    border-radius: 50px;
+    color: var(--c-teal-200);
+}

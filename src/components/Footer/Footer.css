@@ -1,0 +1,95 @@
+.footer {
+    background: #020810;
+    border-top: 1px solid var(--c-border);
+    padding: 2.5rem 0;
+}
+
+.footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.footer__logo {
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--c-text);
+    cursor: pointer;
+    transition: transform 0.2s var(--ease-spring);
+    align-self: flex-start;
+}
+
+.footer__logo:hover {
+    transform: scale(1.08);
+}
+
+.footer__brand p {
+    font-size: 0.8rem;
+    color: var(--c-text-muted);
+}
+
+.footer__linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.78rem;
+    color: var(--c-teal-300);
+    text-decoration: none;
+    transition: color 0.2s, gap 0.2s;
+    margin-top: 0.15rem;
+}
+
+.footer__linkedin:hover {
+    color: var(--c-teal-100);
+    gap: 0.6rem;
+}
+
+.footer__linkedin svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.footer__nav-link {
+    font-size: 0.84rem;
+    color: var(--c-text-muted);
+    padding: 0.3rem 0.7rem;
+    border-radius: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+}
+
+.footer__nav-link:hover {
+    color: var(--c-teal-300);
+    background: rgba(56, 217, 202, 0.07);
+}
+
+.footer__copy {
+    font-size: 0.78rem;
+    color: var(--c-text-faint);
+}
+
+@media (max-width: 768px) {
+    .footer__inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

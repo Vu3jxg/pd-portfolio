@@ -1,0 +1,308 @@
+/* ══════════════════════════════════════════
+   POULAMI DHAR — GLOBAL STYLES
+   ══════════════════════════════════════════ */
+
+:root {
+    --c-bg: #050d1a;
+    --c-bg-2: #07112a;
+    --c-bg-card: rgba(10, 22, 50, 0.75);
+    --c-surface: rgba(15, 28, 60, 0.5);
+    --c-border: rgba(56, 217, 202, 0.1);
+    --c-border-hover: rgba(56, 217, 202, 0.35);
+
+    --c-teal-100: #ccfaf6;
+    --c-teal-200: #80e8dc;
+    --c-teal-300: #38d9ca;
+    --c-teal-400: #22c5b5;
+    --c-teal-500: #0fa898;
+
+    --c-purple-300: #b48bf0;
+    --c-purple-400: #9b6ee0;
+    --c-purple-500: #7c3fd6;
+
+    --c-blue-300: #7ab8f5;
+    --c-blue-400: #4a9eed;
+
+    --c-text: #e8f0fe;
+    --c-text-muted: #8ba0c0;
+    --c-text-faint: #3a506a;
+
+    --c-skin: #f0c896;
+    --c-hair: #2c1810;
+
+    --grad-teal: linear-gradient(135deg, var(--c-teal-400), var(--c-purple-400));
+    --grad-hero: linear-gradient(145deg, #050d1a 0%, #091530 55%, #0e1e3a 100%);
+
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-expo: cubic-bezier(0.19, 1, 0.22, 1);
+    --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    --r-sm: 8px;
+    --r-md: 14px;
+    --r-lg: 20px;
+    --r-xl: 28px;
+
+    --shadow-teal: 0 0 28px rgba(34, 197, 181, 0.18);
+    --shadow-card: 0 8px 40px rgba(0, 0, 0, 0.45);
+
+    --container: 1200px;
+    --section-pad: clamp(5rem, 10vw, 8rem);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--c-bg);
+    color: var(--c-text);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: var(--c-teal-400);
+    color: #000;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+svg {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    background: none;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--c-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--c-teal-500);
+    border-radius: 3px;
+}
+
+/* ── Container ── */
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 5vw, 3rem);
+}
+
+/* ── Section ── */
+.section {
+    padding: var(--section-pad) 0;
+}
+
+.section--alt {
+    background: var(--c-bg-2);
+    position: relative;
+}
+
+.section--alt::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(34, 197, 181, 0.025) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ── Section header ── */
+.section-header {
+    text-align: center;
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.section-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--c-teal-400);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    background: linear-gradient(135deg, #fff, rgba(255, 255, 255, 0.7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    color: var(--c-text-muted);
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+}
+
+/* ── Buttons ── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
+    cursor: pointer;
+}
+
+.btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn:active {
+    transform: scale(0.97) !important;
+}
+
+.btn--primary {
+    background: var(--grad-teal);
+    color: #000;
+    font-weight: 700;
+    box-shadow: 0 4px 24px rgba(34, 197, 181, 0.35);
+    border: none;
+}
+
+.btn--primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(34, 197, 181, 0.5);
+}
+
+.btn--ghost {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--c-text);
+    backdrop-filter: blur(8px);
+}
+
+.btn--ghost:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(56, 217, 202, 0.35);
+    box-shadow: var(--shadow-teal);
+}
+
+.btn--sm {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.84rem;
+}
+
+.btn--full {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ── Logo brackets ── */
+.logo-brackets {
+    color: var(--c-teal-400);
+}
+
+/* ── Chips ── */
+.chip {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.32rem 0.85rem;
+    border-radius: 50px;
+    transition: transform 0.2s var(--ease-spring), box-shadow 0.2s;
+    cursor: default;
+}
+
+.chip:hover {
+    transform: translateY(-2px) scale(1.05);
+}
+
+.chip--teal {
+    background: rgba(34, 197, 181, 0.1);
+    border: 1px solid rgba(34, 197, 181, 0.25);
+    color: var(--c-teal-200);
+}
+
+.chip--teal:hover {
+    box-shadow: 0 4px 14px rgba(34, 197, 181, 0.25);
+}
+
+.chip--purple {
+    background: rgba(155, 110, 224, 0.1);
+    border: 1px solid rgba(155, 110, 224, 0.25);
+    color: var(--c-purple-300);
+}
+
+.chip--purple:hover {
+    box-shadow: 0 4px 14px rgba(155, 110, 224, 0.25);
+}
+
+.chip--blue {
+    background: rgba(74, 158, 237, 0.1);
+    border: 1px solid rgba(74, 158, 237, 0.25);
+    color: var(--c-blue-300);
+}
+
+.chip--blue:hover {
+    box-shadow: 0 4px 14px rgba(74, 158, 237, 0.25);
+}
+
+.chip--glass {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--c-text-muted);
+}
+
+.chip--glass:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--c-text);
+}
+
+/* ── Responsive shared ── */
+@media (max-width: 768px) {
+    :root {
+        --section-pad: 4.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --section-pad: 3.5rem;
+    }
+}
