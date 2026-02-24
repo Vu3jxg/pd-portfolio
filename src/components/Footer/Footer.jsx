@@ -37,6 +37,29 @@ export default function Footer() {
                             </svg>
                             linkedin.com/in/poulami-dhar-a8477b182
                         </a>
+                        {/* Emails */}
+                        <a
+                            href="mailto:poulami.dhar@nitte.edu.in"
+                            className="footer__email"
+                            aria-label="Institutional email"
+                        >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <polyline points="2,4 12,13 22,4" />
+                            </svg>
+                            poulami.dhar@nitte.edu.in
+                        </a>
+                        <a
+                            href="mailto:poulamidhar1995@gmail.com"
+                            className="footer__email"
+                            aria-label="Personal email"
+                        >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <polyline points="2,4 12,13 22,4" />
+                            </svg>
+                            poulamidhar1995@gmail.com
+                        </a>
                     </div>
 
                     <nav className="footer__nav" aria-label="Footer navigation">

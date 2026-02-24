@@ -3,18 +3,27 @@ import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import './Contact.css'
 
+const emailIcon = (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="2" y="4" width="20" height="16" rx="2" />
+        <polyline points="2,4 12,13 22,4" />
+    </svg>
+)
+
 const contactItems = [
     {
-        id: 'contactEmail',
-        icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-                <polyline points="2,4 12,13 22,4" />
-            </svg>
-        ),
-        label: 'Email',
-        value: 'poulami.dhar@example.com',
-        href: 'mailto:poulami.dhar@example.com',
+        id: 'contactEmailInstitutional',
+        icon: emailIcon,
+        label: 'Institutional Email',
+        value: 'poulami.dhar@nitte.edu.in',
+        href: 'mailto:poulami.dhar@nitte.edu.in',
+    },
+    {
+        id: 'contactEmailPersonal',
+        icon: emailIcon,
+        label: 'Personal Email',
+        value: 'poulamidhar1995@gmail.com',
+        href: 'mailto:poulamidhar1995@gmail.com',
     },
     {
         id: 'contactLinkedIn',
@@ -53,7 +62,7 @@ export default function Contact() {
     const handleSubmit = e => {
         e.preventDefault()
         const { name, email, subject, message } = form
-        const mailto = `mailto:poulami.dhar@example.com?subject=${encodeURIComponent(subject || 'Portfolio Enquiry')}&body=${encodeURIComponent(`Hi Poulami,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`)}`
+        const mailto = `mailto:poulami.dhar@nitte.edu.in?cc=poulamidhar1995@gmail.com&subject=${encodeURIComponent(subject || 'Portfolio Enquiry')}&body=${encodeURIComponent(`Hi Poulami,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`)}`
         window.location.href = mailto
         setSent(true)
         setTimeout(() => setSent(false), 3000)

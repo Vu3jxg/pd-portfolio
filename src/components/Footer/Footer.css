@@ -59,6 +59,27 @@
     flex-shrink: 0;
 }
 
+.footer__email {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.78rem;
+    color: var(--c-teal-300);
+    text-decoration: none;
+    transition: color 0.2s, gap 0.2s;
+}
+
+.footer__email:hover {
+    color: var(--c-teal-100);
+    gap: 0.6rem;
+}
+
+.footer__email svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
 .footer__nav {
     display: flex;
     gap: 0.25rem;
