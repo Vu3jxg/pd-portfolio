@@ -22,7 +22,7 @@ export default function Footer() {
                         >
                             <span className="logo-brackets">&lt;</span>PD<span className="logo-brackets">/&gt;</span>
                         </span>
-                        <p>Poulami Dhar · Medical Researcher</p>
+                        <p>Dr. Poulami Dhar · Medical Researcher</p>
                         {/* LinkedIn */}
                         <a
                             href={LINKEDIN}
@@ -71,7 +71,7 @@ export default function Footer() {
                     </nav>
 
                     <p className="footer__copy">
-                        &copy; {year} Poulami Dhar &nbsp;·&nbsp; Crafted with passion &amp; purpose.
+                        &copy; {year} Dr. Poulami Dhar &nbsp;·&nbsp; Crafted with passion &amp; purpose.
                     </p>
                 </div>
             </div>

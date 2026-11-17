@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════
-   POULAMI DHAR PORTFOLIO — MAIN STYLESHEET
+   DR. POULAMI DHAR PORTFOLIO — MAIN STYLESHEET
    ══════════════════════════════════════════ */
 
 /* ─── 1. CUSTOM PROPERTIES ─────────────────── */
@@ -301,11 +301,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 .hero__name {
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  font-size: clamp(1.85rem, 5.8vw, 5.4rem);
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.1;
   margin-bottom: 1.25rem;
   letter-spacing: -0.02em;
+  white-space: nowrap;
   background: linear-gradient(135deg, #fff 30%, rgba(255,255,255,0.7));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -317,7 +318,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  display: block;
+  display: inline;
 }
 
 .hero__typewriter {
@@ -1348,7 +1349,7 @@ a.contact-item__value:hover { color: var(--c-teal-300); }
 
   .footer__inner { flex-direction: column; align-items: center; text-align: center; }
 
-  .hero__name { font-size: clamp(3rem, 13vw, 5rem); }
+  .hero__name { font-size: clamp(1.85rem, 8vw, 4rem); white-space: nowrap; }
 }
 
 @media (max-width: 480px) {

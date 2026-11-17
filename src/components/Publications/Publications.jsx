@@ -5,33 +5,27 @@ import './Publications.css'
 const publications = [
     {
         id: 'pub1',
-        doi: 'https://doi.org/10.1002/agm2.12236',
-        short: '10.1002/agm2.12236',
-        title: 'Epigenetic alterations — The silent indicator for early aging and age-associated health-risks',
-        journal: 'Aging Medicine (Wiley)',
+        year: '2026',
+        doi: 'https://doi.org/10.1016/j.exger.2026.113254',
+        short: '10.1016/j.exger.2026.113254',
+        title: 'Serum 25 (OH) vitamin D and SIRT1-VDR-miR-124 expression: A controlled interventional study in a vitamin D-deficient male rat model',
+        journal: 'Experimental Gerontology (Elsevier)',
         icon: '📄',
-        hue: 175,
+        hue: 160,
     },
     {
         id: 'pub2',
-        doi: 'https://doi.org/10.51248/.v43i02.2326',
-        short: '10.51248/.v43i02.2326',
-        title: 'A cross-sectional survey of platelet transfusion practices from a tertiary care center',
-        journal: 'Biomedical Journal',
+        year: '2026',
+        doi: 'https://doi.org/10.25259/JHASNU_57_2026',
+        short: '10.25259/JHASNU_57_2026',
+        title: 'Pro-Longevity Role of SIRT6 to Promote Life Span and Delay Ageing – An Integrated Review Towards Healthy Ageing',
+        journal: 'Journal of Health and Allied Sciences NU',
         icon: '📄',
-        hue: 240,
+        hue: 205,
     },
     {
         id: 'pub3',
-        doi: 'https://doi.org/10.1002/agm2.12330',
-        short: '10.1002/agm2.12330',
-        title: 'A hypothesis: MiRNA-124 mediated regulation of sirtuin 1 and vitamin D receptor gene expression accelerates aging',
-        journal: 'Aging Medicine (Wiley)',
-        icon: '📄',
-        hue: 175,
-    },
-    {
-        id: 'pub4',
+        year: '2025',
         doi: 'https://doi.org/10.1002/cph4.70047',
         short: '10.1002/cph4.70047',
         title: 'Influence of Serum Vitamin D on Age-Related Physiological Changes: A Cross-Sectional Study in Middle-Aged Adults',
@@ -40,7 +34,18 @@ const publications = [
         hue: 280,
     },
     {
+        id: 'pub4',
+        year: '2024',
+        doi: 'https://doi.org/10.1002/agm2.12330',
+        short: '10.1002/agm2.12330',
+        title: 'A hypothesis: MiRNA-124 mediated regulation of sirtuin 1 and vitamin D receptor gene expression accelerates aging',
+        journal: 'Aging Medicine (Wiley)',
+        icon: '📄',
+        hue: 175,
+    },
+    {
         id: 'pub5',
+        year: '2024',
         doi: null,
         short: 'Copyright Registration · L-143216/2024',
         title: 'MicroRNA Mediated Regulation of Sirtuin 1 and Vitamin D Receptor Expression — Accelerated Early Onset of Ageing',
@@ -48,6 +53,26 @@ const publications = [
         icon: '©️',
         hue: 45,
         isCopyright: true,
+    },
+    {
+        id: 'pub6',
+        year: '2023',
+        doi: 'https://doi.org/10.51248/.v43i02.2326',
+        short: '10.51248/.v43i02.2326',
+        title: 'A cross-sectional survey of platelet transfusion practices from a tertiary care center',
+        journal: 'Biomedical Journal',
+        icon: '📄',
+        hue: 240,
+    },
+    {
+        id: 'pub7',
+        year: '2022',
+        doi: 'https://doi.org/10.1002/agm2.12236',
+        short: '10.1002/agm2.12236',
+        title: 'Epigenetic alterations — The silent indicator for early aging and age-associated health-risks',
+        journal: 'Aging Medicine (Wiley)',
+        icon: '📄',
+        hue: 175,
     },
 ]
 
@@ -82,7 +107,10 @@ export default function Publications() {
                         >
                             <div className="pub-card__icon">{p.icon}</div>
                             <div className="pub-card__body">
-                                <span className="pub-card__journal">{p.journal}</span>
+                                <div className="pub-card__meta">
+                                    <span className="pub-card__journal">{p.journal}</span>
+                                    {p.year && <span className="pub-card__year">{p.year}</span>}
+                                </div>
                                 {p.title && (
                                     <p className="pub-card__title">{p.title}</p>
                                 )}

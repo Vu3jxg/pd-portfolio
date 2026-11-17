@@ -1,6 +1,6 @@
-# Poulami Dhar — Portfolio
+# Dr. Poulami Dhar — Portfolio
 
-A dynamic, animated personal portfolio for **Poulami Dhar**, a medical researcher interested in medical science, technology, and philosophy.
+A dynamic, animated personal portfolio for **Dr. Poulami Dhar**, a medical researcher interested in medical science, technology, and philosophy.
 
 ## 🚀 Tech Stack
 

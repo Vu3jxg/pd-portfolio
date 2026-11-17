@@ -68,8 +68,7 @@ export default function Hero() {
             <div className="hero__content">
 
                 <motion.h1 className="hero__name" {...fadeUp(0.4)}>
-                    Poulami
-                    <span className="hero__name--accent"> Dhar</span>
+                    Dr. Poulami <span className="hero__name--accent">Dhar</span>
                 </motion.h1>
 
                 <motion.div className="hero__typewriter" {...fadeUp(0.55)} aria-live="polite">

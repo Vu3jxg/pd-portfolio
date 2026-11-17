@@ -48,14 +48,35 @@
     min-width: 0;
 }
 
+.pub-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.35rem;
+    flex-wrap: wrap;
+}
+
 .pub-card__journal {
-    display: block;
+    display: inline-block;
     font-size: 0.74rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--c-text-faint);
-    margin-bottom: 0.35rem;
     font-weight: 600;
+}
+
+.pub-card__year {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--c-teal-300);
+    background: rgba(34, 197, 181, 0.1);
+    border: 1px solid rgba(34, 197, 181, 0.28);
+    padding: 0.08rem 0.5rem;
+    border-radius: 50px;
+    letter-spacing: 0.04em;
+    line-height: 1.25;
 }
 
 .pub-card__title {

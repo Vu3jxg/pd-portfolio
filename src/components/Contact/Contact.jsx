@@ -62,7 +62,7 @@ export default function Contact() {
     const handleSubmit = e => {
         e.preventDefault()
         const { name, email, subject, message } = form
-        const mailto = `mailto:poulami.dhar@nitte.edu.in?cc=poulamidhar1995@gmail.com&subject=${encodeURIComponent(subject || 'Portfolio Enquiry')}&body=${encodeURIComponent(`Hi Poulami,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`)}`
+        const mailto = `mailto:poulami.dhar@nitte.edu.in?cc=poulamidhar1995@gmail.com&subject=${encodeURIComponent(subject || 'Portfolio Enquiry')}&body=${encodeURIComponent(`Hi Dr. Poulami,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`)}`
         window.location.href = mailto
         setSent(true)
         setTimeout(() => setSent(false), 3000)

@@ -58,7 +58,7 @@ export default function About() {
                                 <div className="avatar-circle">
                                     <img
                                         src={poulamiPhoto}
-                                        alt="Poulami Dhar"
+                                        alt="Dr. Poulami Dhar"
                                         className="avatar-photo"
                                     />
                                 </div>
@@ -69,7 +69,7 @@ export default function About() {
                                 ))}
                             </div>
                             <div className="avatar-info">
-                                <strong>Poulami Dhar</strong>
+                                <strong>Dr. Poulami Dhar</strong>
                                 <span>Medical Researcher</span>
                             </div>
                         </div>
@@ -83,7 +83,7 @@ export default function About() {
                         transition={{ duration: 0.8, delay: 0.3 }}
                     >
                         <p className="about__lead">
-                            Hello! I'm <strong>Poulami Dhar</strong>, a passionate medical researcher on a mission to understand the human body, the technologies that heal it, and the philosophical questions that surround it.
+                            Hello! I'm <strong>Dr. Poulami Dhar</strong>, a passionate medical researcher on a mission to understand the human body, the technologies that heal it, and the philosophical questions that surround it.
                         </p>
                         <p>
                             My academic journey has taken me deep into life sciences — from cellular biology and pharmacology to the ethics of emerging medical technologies. I believe the most meaningful breakthroughs happen at the intersection of disciplines.

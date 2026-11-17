@@ -21,7 +21,7 @@ export default function QuoteSection() {
                         means to be well, to be human, and to heal.
                     </p>
                     <footer>
-                        <cite>— Poulami Dhar, Personal Research Philosophy</cite>
+                        <cite>— Dr. Poulami Dhar, Personal Research Philosophy</cite>
                     </footer>
                     <span className="quote-mark quote-mark--close" aria-hidden="true">"</span>
                 </motion.blockquote>
